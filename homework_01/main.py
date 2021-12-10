@@ -22,9 +22,9 @@ PRIME = "prime"
 
 def is_prime(num):
     k = 0
-    if num % 2 == 0:
+    if (num == 0) or (num == 1):
         return False
-    for i in range (3, (num // 2) + 1):
+    for i in range (2, (num // 2) + 1):
         if num % i == 0:
             k += 1
             print (i)
@@ -52,5 +52,4 @@ def filter_numbers(*args):
 
     if args[1] == "prime":
         return [arg for arg in args[0] if is_prime(arg)]
-
 

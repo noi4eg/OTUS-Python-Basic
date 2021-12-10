@@ -142,3 +142,5 @@ cython_debug/
 
 # original repo
 ./BasePython/
+.gitignore
+.vscode
