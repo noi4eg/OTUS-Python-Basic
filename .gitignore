@@ -141,6 +141,6 @@ dmypy.json
 cython_debug/
 
 # original repo
-./BasePython/
+BasePython/
 .gitignore
 .vscode
