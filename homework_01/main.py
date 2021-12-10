@@ -51,5 +51,6 @@ def filter_numbers(*args):
         return [arg for arg in args[0] if 0 == arg % 2]
 
     if args[1] == "prime":
-        return [arg for arg in args[0] if is_prime(arg)]
+        # return [arg for arg in args[0] if is_prime(arg)]
+        return list(filter(lambda i: is_prime(i), args[0]))
 
