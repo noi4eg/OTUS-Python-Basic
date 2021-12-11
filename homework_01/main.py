@@ -27,13 +27,12 @@ def is_prime(num):
     for i in range (2, (num // 2) + 1):
         if num % i == 0:
             k += 1
-            print (i)
     if k == 0:
         return True
     else:
         return False
 
-def filter_numbers(*args):
+def filter_numbers(array, filter_type):
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
@@ -44,13 +43,12 @@ def filter_numbers(*args):
     >>> filter_numbers([2, 3, 4, 5], EVEN)
     <<< [2, 4]
     """   
-    if args[1] == "odd":
-        return [arg for arg in args[0] if 1 == arg % 2]
+    if filter_type == ODD:
+        return [arr for arr in array if 1 == arr % 2]
 
-    if args[1] == "even":
-        return [arg for arg in args[0] if 0 == arg % 2]
+    if filter_type == EVEN:
+        return [arr for arr in array if 0 == arr % 2]
 
-    if args[1] == "prime":
-        # return [arg for arg in args[0] if is_prime(arg)]
-        return list(filter(lambda i: is_prime(i), args[0]))
+    if filter_type == PRIME:
+        return list(filter(lambda i: is_prime(i), array))
 
