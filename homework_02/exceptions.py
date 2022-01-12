@@ -10,7 +10,7 @@ class LowFuelError(Exception):
         return "LowFuelError"
 
 
-class NotEnoughtFuel(Exception):
+class NotEnoughFuel(Exception):
 
     def __str__(self) -> str:
         return "NotEnoughtFuel"
